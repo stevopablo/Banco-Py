@@ -26,9 +26,12 @@ class Conta:
             print(f"Saque de {valor} realizado com sucesso. Novo saldo: {self.saldo}")
             
     def depositar(self, valor):
-        self.saldo += valor
-        self.extrato.append(f"Depósito: {valor} em {dt.datetime.now().strftime('%d/%m/%Y %H:%M:%S')}")
-        print(f"Depósito de {valor} realizado com sucesso. Novo saldo: {self.saldo}")
+        if valor <= 0:
+            print("Valor inválido, deve ser maior que zero")
+        else:
+            self.saldo += valor
+            self.extrato.append(f"Depósito: {valor} em {dt.datetime.now().strftime('%d/%m/%Y %H:%M:%S')}")
+            print(f"Depósito de {valor} realizado com sucesso. Novo saldo: {self.saldo}")
         
     def transferir(self, valor, conta_destino):
         if valor > self.saldo:

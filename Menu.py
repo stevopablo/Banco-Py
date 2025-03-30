@@ -1,0 +1,12 @@
+def chamar_Menu():
+    print("\n===============================")
+    print("Sistema de Controle de Conta Bancária")
+    print("1. Criar Conta")
+    print("2. Info da Conta")
+    print("3. Depositar")
+    print("4. Sacar")
+    print("5. Transferir")
+    print("6. Consultar Saldo")
+    print("7. Extrato")
+    print("8. Sair")
+    print("\n===============================")
